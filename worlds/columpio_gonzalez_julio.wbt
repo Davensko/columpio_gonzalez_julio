@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.3104401478041687 -0.9281546435908871 -0.20531895239358527 5.149158814742398
-  position 8.2848526215136 4.47328092750148 6.0880480548651885
+  orientation -0.26957499264688634 0.9489306370919623 0.1638901135751442 1.1395857068604982
+  position 2.6594377169990944 2.9938847143523883 2.9494063205639547
 }
 TexturedBackground {
 }
@@ -71,6 +71,29 @@ Solid {
           ]
         }
       ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.34 1.81 1
+      }
+      endPoint Solid {
+        translation -0.34 1.81 1
+        children [
+          Shape {
+            appearance DEF Green_ PBRAppearance {
+              baseColor 0.45098039215686275 0.8235294117647058 0.08627450980392157
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.15 0.05 0.8
+            }
+          }
+        ]
+        physics Physics {
+        }
+      }
     }
   ]
 }
