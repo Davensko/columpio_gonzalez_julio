@@ -2,12 +2,58 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5798318499844731 0.8021993936234014 0.1423768190887492 0.5477864065572071
-  position 1.9522029237149274 1.643548904418235 4.453498525883952
+  orientation 0.12151281185000497 -0.9848339835940825 -0.12384127468059979 4.853723086761306
+  position 7.675719539821685 2.6692944026584775 2.85151949212739
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+Solid {
+  children [
+    DEF columpio_ Group {
+      children [
+        DEF A Group {
+          children [
+            Transform {
+              translation 0 0.947 0
+              rotation 0 0 1 0.349066
+              children [
+                DEF sloped_foot Shape {
+                  appearance DEF gray_ PBRAppearance {
+                    baseColor 0.3333333333333333 0.3411764705882353 0.3254901960784314
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.04 2 0.1
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -0.68 0.947 0
+              rotation 0 0 1 -0.349066
+              children [
+                USE sloped_foot
+              ]
+            }
+            Transform {
+              translation -0.34 0.65 0
+              children [
+                Shape {
+                  appearance USE gray_
+                  geometry Box {
+                    size 0.9 0.04 0.1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
